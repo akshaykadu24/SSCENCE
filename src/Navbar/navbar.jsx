@@ -18,7 +18,8 @@ import {
   PopoverContent,
   PopoverArrow,
   Spacer,
-  Img
+  Img,
+  Heading
 } from "@chakra-ui/react";
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
@@ -44,27 +45,27 @@ export function Navbar() {
 
   return (
     <>
-      <Show above="md">
-        <Box w="100%">
+      <Show breakpoint='(min-width: 885px)' >
+        <Box position="fixed" z-index="-1" marginTop="-70px" w="100%">
           <Flex bg=" black" color="#FFF" p="10px">
-            <Box fontSize="11px" m="10px" w="30%">
-              <Flex>
+            <Box fontSize="11px" m="10px" >
+              <Flex >
                 {" "}
                 <Box margin="10px">
-                  <Link to="/mens">MENSWEAR</Link>
+                <Heading size="sm"><Link to="/mens">MENSWEAR</Link></Heading>
                 </Box>
                 <Box margin="10px">
-                  <Link to="/womens">WOMENSWEAR</Link>
+                  <Heading size="sm"><Link to="/womens">WOMENSWEAR</Link></Heading>
                 </Box>
-                <Box margin="10px">
-                  <Link to="/everything-else">EVERYTINKG-ELSE</Link>
+                <Box margin="10px" >
+                  <Heading size="sm"><Link to="/everything-else">EVERYTINKG-ELSE</Link></Heading>
                 </Box>
               </Flex>
             </Box>
 
             <Spacer />
-            <Box margin="10px">
-              <Link to="/">SSENSE</Link>
+            <Box margin="14px 10px 10px 10px">
+              <Heading size="md"><Link to="/">SSENSE</Link></Heading>
             </Box>
 
             <Spacer />
@@ -74,7 +75,7 @@ export function Navbar() {
                 <Box margin="10px">
                   <Popover>
                     <PopoverTrigger>
-                      <Link>SEARCH</Link>
+                      <Heading size="sm"><Link>SEARCH</Link></Heading>
                     </PopoverTrigger>
                     <Portal>
                       <PopoverContent>
@@ -122,19 +123,19 @@ export function Navbar() {
                       LOGOUT
                     </button>
                   ) : (
-                    <Link to="/login">LOGIN</Link>
+                    <Heading size="sm"><Link to="/login">LOGIN</Link></Heading>
                   )}
                 </Box>
                 <Box margin="10px">
-                  <Link to="/cart">SHOPING_BAG({data})</Link>
+                  <Heading size="sm"><Link to="/cart">SHOPING_BAG({data})</Link></Heading>
                 </Box>
               </Flex>
             </Box>
           </Flex>
         </Box>
       </Show>
-      <Show below="md">
-        <Box position="fixed" w="100%" bg="white">
+      <Show breakpoint='(max-width: 885px)'>
+        <Box position="fixed" w="100%" marginTop="-70px" bg="white">
           <Flex p="10px">
             <Box>
               <Menu>
@@ -211,7 +212,7 @@ export function Navbar() {
               </Popover>
             </Box>
             <Spacer />
-            <Link to="/">SSENSE</Link>
+            <Heading> <Link to="/">SSENSE</Link></Heading>
             <Spacer />
             <Box>
               <Button margin="10px" padding="0px">

@@ -56,7 +56,7 @@ export function Login() {
 
   return (
     <>
-      <Box w="100%" display="flex" justifyContent="center">
+      <Box marginTop="70px" w="100%" display="flex" justifyContent="center">
         <Flex w="40%" direction="column" justifyContent="center">
           <Text m="10px">LOGIN HERE</Text>
 

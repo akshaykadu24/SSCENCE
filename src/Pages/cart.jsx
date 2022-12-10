@@ -40,7 +40,8 @@ export function Cart() {
   };
 console.log(mail)
   return (
-    <Box p="0px 30px"
+    <Box marginTop="70px" 
+      p="0px 30px"
       display="flex"
       flexDirection={{ sm: "column", md: "row" }}
       justifyContent="center"

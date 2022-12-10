@@ -38,7 +38,7 @@ export function OtherProduct() {
   }, []);
 
   return (
-    <Box>
+    <Box marginTop="70px">
       <SimpleGrid columns={[2, 3, 4]} spacing="40px">
         {data?.map((el, index) => {
           return (

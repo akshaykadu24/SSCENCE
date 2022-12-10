@@ -37,7 +37,7 @@ export function Womens() {
   };
 
   return (
-    <Box>
+    <Box marginTop="70px">
       <SimpleGrid columns={[2, 3, 4]} gap={30}>
         {data?.map((el, index) => {
           return (

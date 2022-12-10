@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 export function Main() {
   return (
     <>
-      <Box padding={{ sm: "0rem", md: "0.5rem 7rem" }}>
+      <Box marginTop="70px" padding={{ sm: "0rem", md: "0.5rem 7rem" }}>
         <SimpleGrid columns={{ sm: 1, md: 2 }} spacing="40px">
           <Box height="600px">
             <Img
